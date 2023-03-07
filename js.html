@@ -1,0 +1,25 @@
+  <script>
+    document.getElementById('btn').addEventListener('click',
+    save)
+    function save(){
+  var user ={}
+  user.data1 = document.getElementById('username').value
+  user.data2 = document.getElementById('nickname').value
+  google.script.run.save(user)
+  document.getElementById('username').value=""
+  document.getElementById('nickname').value=""
+  //sweetAlert({text:"บันทึกข้อมูล เรียบร้อยแล้ว!!",icon:"success",timer:3000})
+  swal({
+  title: "บันทึกข้อมูล",
+  text: "เรียบร้อยแล้ว!!",
+  icon: "success",
+  button: "OK ปิดเลย",
+  timer: 3000
+});
+
+    }
+
+  </script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
